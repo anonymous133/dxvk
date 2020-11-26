@@ -63,7 +63,7 @@ d3d11_src = [
   'd3d11_view_uav.cpp',
 ]
 
-d3d11_dll = shared_library('d3d11'+dll_ext, dxgi_common_src + d3d11_src + d3d10_src, glsl_generator.process(dxgi_shaders), d3d11_res,
+d3d11_dll = shared_library('d3d11'+dll_ext, dxgi_common_src + d3d11_src + d3d10_src, glsl_generator.process(dxgi_shaders), [],
   name_prefix         : '',
   dependencies        : [ lib_dxgi, dxbc_dep, dxvk_dep ],
   include_directories : dxvk_include_path,
